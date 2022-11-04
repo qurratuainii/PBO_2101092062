@@ -17,6 +17,8 @@ public class StudentRecord {
     private double englishGrade;
     private double scienceGrade;
     private double average;
+    private double max;
+  
     
     private static int studentCount;
     
@@ -60,19 +62,29 @@ public class StudentRecord {
         this.englishGrade = englishGrade;
     }
     
-    public double getScieneGrade(){
+    public double getScienceGrade(){
         return scienceGrade;
     }
     
-    public void setScienceGrade(double englishGrade){
+    public void setScienceGrade(double scienceGrade){
         this.scienceGrade = scienceGrade;
     }
     
     public double getAverage(){
+        average = (mathGrade + englishGrade + scienceGrade)/3;
         return average;
+    }
+    
+    public double getMax(){
+        max = (mathGrade >= englishGrade) ? mathGrade : englishGrade;
+        max = (scienceGrade >= max)? scienceGrade : max;
+        
+        return max;
     }
     
     public static int getStudentCount(){
         return studentCount;
     }
+    
+    
 }
