@@ -13,7 +13,7 @@ public class StudentRecordExample {
     public static void main(String[] args) {
         StudentRecord student1 = new StudentRecord();
         //
-        student1.setName("Ani");
+        student1.setName("Aini");
         student1.setAddress("Padang");
         student1.setAge(20);
         student1.setMathGrade(70);
