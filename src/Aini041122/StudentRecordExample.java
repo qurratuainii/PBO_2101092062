@@ -30,5 +30,16 @@ public class StudentRecordExample {
         System.out.println("Rata-rata      : "+student1.getAverage());
         System.out.println("Maximum        : "+student1.getMax());
         
+        System.out.println("\n");
+        
+        StudentRecord student2 = new StudentRecord("Qurratu Aini", "Bukittinggi");
+        
+        System.out.println("Nama           : "+student2.getName());
+        System.out.println("Alamat         : "+student2.getAddress());
+        
+        StudentRecord student3 = new StudentRecord(70, 85, 90);
+        System.out.println("Matematika     : "+student3.getMathGrade());
+        System.out.println("B.Inggris      : "+student3.getEnglishGrade());
+        System.out.println("Pengetahuan    : "+student3.getScienceGrade());
     }
 }
