@@ -13,7 +13,7 @@ public class Student extends Person{
     public Student(){
         super();
         System.out.println("Inside Student:Constructor");
-        super.name = " ";
+        super.name = "";
         super.address = "";
     }
     
