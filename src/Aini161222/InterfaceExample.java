@@ -27,8 +27,5 @@ public class InterfaceExample {
         boolean lineA_lineB = myline.isGreater(line1,line2);
         System.out.println("Line A > Line B :"+lineA_lineB);
         
-        
-        
-        
     }
 }
