@@ -24,6 +24,7 @@ public class FormAnggota extends javax.swing.JFrame {
         initComponents();
         controller = new AnggotaController(this);
         controller.bersihForm();
+        controller.tampil();
     }
     
     //bagian atas untuk menyambung view dengan controller
@@ -68,6 +69,7 @@ public class FormAnggota extends javax.swing.JFrame {
         tblAnggota = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Form Anggota");
         getContentPane().setLayout(null);
 
         jLabel1.setText("Alamat");
@@ -161,6 +163,11 @@ public class FormAnggota extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        tblAnggota.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblAnggotaMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tblAnggota);
 
         getContentPane().add(jScrollPane1);
@@ -184,19 +191,34 @@ public class FormAnggota extends javax.swing.JFrame {
 
     private void btnInsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertActionPerformed
         // TODO add your handling code here:
+        controller.saveAnggota();
+        controller.tampil();
+        controller.bersihForm();
     }//GEN-LAST:event_btnInsertActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
         // TODO add your handling code here:
+        controller.deleteAnggota();
+        controller.tampil();
+        controller.bersihForm();
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
         // TODO add your handling code here:
+        controller.bersihForm();
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
         // TODO add your handling code here:
+        controller.updateAnggota();
+        controller.tampil();
+        controller.bersihForm();
     }//GEN-LAST:event_btnUpdateActionPerformed
+
+    private void tblAnggotaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblAnggotaMouseClicked
+        // TODO add your handling code here:
+        controller.getAnggota();
+    }//GEN-LAST:event_tblAnggotaMouseClicked
 
     /**
      * @param args the command line arguments
