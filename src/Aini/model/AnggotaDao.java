@@ -15,6 +15,7 @@ public interface AnggotaDao {
     Anggota save(Anggota anggota);
     Anggota update(int index, Anggota anggota);
     void delete (int index);
+    public Anggota getAnggota(int index);
     List<Anggota> getAllAnggota();
     
 }
