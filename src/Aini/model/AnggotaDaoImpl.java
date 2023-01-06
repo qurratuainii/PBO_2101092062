@@ -15,6 +15,13 @@ import java.util.List;
 public class AnggotaDaoImpl implements AnggotaDao {
     
     private List<Anggota> data = new ArrayList<>();
+    
+    public AnggotaDaoImpl(){
+        data.add(new Anggota("1111", "Ali", "Padang"));
+        data.add(new Anggota("1112", "Ani", "Padang"));
+        data.add(new Anggota("1113", "Budi", "Padang Panjang"));
+    }
+    
     @Override
     public Anggota save(Anggota anggota) {
         data.add(anggota);
@@ -33,8 +40,12 @@ public class AnggotaDaoImpl implements AnggotaDao {
     }
 
     @Override
+    public Anggota getAnggota(int index) {  
+        return data.get(index);
+    }
+    
+    @Override
     public List<Anggota> getAllAnggota() {
         return data;
     }
-    
 }
